@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="0" name="Failed suite [Surefire suite]">
+  <test name="Surefire test(failed)">
+    <classes>
+      <class name="com.banistmo.notifybam.NotifyTest">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="testPost"/>
+          <include name="afterSuite"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="testPostOnline"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- com.banistmo.notifybam.NotifyTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

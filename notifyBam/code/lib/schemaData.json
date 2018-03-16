@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "f0": {"title": "f0", "type": "number", "maxLength": 18, "maximum":9999},
+        "seqNum": {"title": "seqNum",  "type": "string","maxLength":10},
+        "trnDate": {"title": "trnDate",  "type": "string", "maxLength": 6},
+        "fromAcctId": {"title": "fromAcctId", "type": "string", "maxLength": 25},
+        "f1": {"title": "f1", "type": "string", "maxLength": 120},
+        "f11": {"title": "f11", "type": "number", "maxLength": 16, "maximum":9999},
+        "curAmt": {"title": "curAmt",  "type": "number", "maximum":9999999999999},
+        "curCode": {"title": "curCode", "type": "string", "maxLength": 10,  "default": "N$"  },
+        "f2": {"title": "f2", "type": "string", "maxLength": 210},
+        "toAcctId": {"title": "toAcctId","type": "string", "maxLength": 50 },
+        "f3": {"title": "f3", "type": "string", "maxLength": 20},
+        "posLocation": {"title": "posLocation","type": "string", "maxLength": 10},
+        "memo": {"title": "memo","type": "string", "maxLength": 500},
+        "f4": {"title": "f4", "type": "string", "maxLength": 10},
+        "agentIdent": {"title": "agentIdent","type": "string", "maxLength": 10},
+        "acctBal": {"title": "acctBal","type": "number", "maximum":9999999999999},
+        "f5": {"title": "f5", "type": "string", "maxLength": 18},
+        "trnTypeValue": {"title": "trnTypeValue","type": "string", "maxLength": 50 , "maximum":9999999999999},
+        "f59": {"title": "f59", "type": "string", "maxLength": 15},
+        "f60": {"title": "f60", "type": "number", "maxLength": 80},
+        "f6": {"title": "f6", "type": "string", "maxLength": 80},
+        "scaCode": {"title": "scaCode", "type": "string", "maxLength": 80},
+        "f7": {"title": "f7", "type": "string", "maxLength": 1440},
+        "scaDate": {"title": "scaDate" , "type": "string", "maxLength": 8},
+        "f8": {"title": "f8", "type": "string", "maxLength": 32},
+        "trnTime": {"title": "trnTime", "type": "string", "maxLength": 10},
+         "f9": {"title": "f9", "type": "string", "maxLength": 4934},
+         "f10": {"title": "f10", "type": "string", "maxLength": 4000}
+    },
+    "required": [
+       "seqNum", "trnDate",
+       "fromAcctId","curAmt",
+       "posLocation","memo","scaDate",
+       "trnTime"    
+    ]
+}
+

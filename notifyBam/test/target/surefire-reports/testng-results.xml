@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="506" started-at="2018-01-29T17:04:28Z" finished-at="2018-01-29T17:04:28Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="506" started-at="2018-01-29T17:04:28Z" finished-at="2018-01-29T17:04:28Z">
+      <class name="com.banistmo.notifybam.NotifyTest">
+        <test-method status="PASS" signature="beforeSuite(org.testng.ITestContext)[pri:0, instance:com.banistmo.notifybam.NotifyTest@31206beb]" name="beforeSuite" is-config="true" duration-ms="995" started-at="2018-01-29T12:04:27Z" finished-at="2018-01-29T12:04:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3f28bd56]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.banistmo.notifybam.NotifyTest@31206beb]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2018-01-29T12:04:28Z" finished-at="2018-01-29T12:04:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.banistmo.notifybam.NotifyTest@31206beb]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="0" started-at="2018-01-29T12:04:28Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-01-29T12:04:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.banistmo.notifybam.NotifyTest@31206beb]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-01-29T12:04:28Z" finished-at="2018-01-29T12:04:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.banistmo.notifybam.NotifyTest.testPost()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="FAIL" signature="testPost()[pri:0, instance:com.banistmo.notifybam.NotifyTest@31206beb]" name="testPost" duration-ms="475" started-at="2018-01-29T12:04:28Z" finished-at="2018-01-29T12:04:28Z">
+          <exception class="com.consol.citrus.exceptions.TestCaseFailedException">
+            <message>
+              <![CDATA[Unable to resolve dynamic endpoint uri! Neither header entry 'citrus_endpoint_uri' nor default endpoint uri is set]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.consol.citrus.exceptions.TestCaseFailedException: Unable to resolve dynamic endpoint uri! Neither header entry 'citrus_endpoint_uri' nor default endpoint uri is set
+	at com.consol.citrus.TestCase.executeAction(TestCase.java:237)
+	at com.consol.citrus.TestCase.doExecute(TestCase.java:149)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.Citrus.run(Citrus.java:290)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.invokeTestMethod(TestNGCitrusTest.java:132)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTestDesigner.invokeTestMethod(TestNGCitrusTestDesigner.java:73)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.run(TestNGCitrusTest.java:110)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.run(TestNGCitrusTest.java:56)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:221)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:657)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+Caused by: com.consol.citrus.exceptions.CitrusRuntimeException: Unable to resolve dynamic endpoint uri! Neither header entry 'citrus_endpoint_uri' nor default endpoint uri is set
+	at com.consol.citrus.endpoint.resolver.DynamicEndpointUriResolver.resolveEndpointUri(DynamicEndpointUriResolver.java:60)
+	at com.consol.citrus.http.client.HttpClient.send(HttpClient.java:94)
+	at com.consol.citrus.actions.SendMessageAction.doExecute(SendMessageAction.java:119)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.dsl.actions.DelegatingTestAction.doExecute(DelegatingTestAction.java:54)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.TestCase.executeAction(TestCase.java:230)
+	... 32 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.consol.citrus.exceptions.TestCaseFailedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPost -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.banistmo.notifybam.NotifyTest@31206beb]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-01-29T12:04:28Z" finished-at="2018-01-29T12:04:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.banistmo.notifybam.NotifyTest.testPost()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.banistmo.notifybam.NotifyTest@31206beb]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="15" started-at="2018-01-29T12:04:28Z" finished-at="2018-01-29T12:04:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.banistmo.notifybam.NotifyTest.testPostOnline()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="FAIL" signature="testPostOnline()[pri:0, instance:com.banistmo.notifybam.NotifyTest@31206beb]" name="testPostOnline" duration-ms="0" started-at="2018-01-29T12:04:28Z" finished-at="2018-01-29T12:04:28Z">
+          <exception class="com.consol.citrus.exceptions.TestCaseFailedException">
+            <message>
+              <![CDATA[Unable to resolve dynamic endpoint uri! Neither header entry 'citrus_endpoint_uri' nor default endpoint uri is set]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.consol.citrus.exceptions.TestCaseFailedException: Unable to resolve dynamic endpoint uri! Neither header entry 'citrus_endpoint_uri' nor default endpoint uri is set
+	at com.consol.citrus.TestCase.executeAction(TestCase.java:237)
+	at com.consol.citrus.TestCase.doExecute(TestCase.java:149)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.Citrus.run(Citrus.java:290)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.invokeTestMethod(TestNGCitrusTest.java:132)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTestDesigner.invokeTestMethod(TestNGCitrusTestDesigner.java:73)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.run(TestNGCitrusTest.java:110)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.run(TestNGCitrusTest.java:56)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:221)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:657)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+Caused by: com.consol.citrus.exceptions.CitrusRuntimeException: Unable to resolve dynamic endpoint uri! Neither header entry 'citrus_endpoint_uri' nor default endpoint uri is set
+	at com.consol.citrus.endpoint.resolver.DynamicEndpointUriResolver.resolveEndpointUri(DynamicEndpointUriResolver.java:60)
+	at com.consol.citrus.http.client.HttpClient.send(HttpClient.java:94)
+	at com.consol.citrus.actions.SendMessageAction.doExecute(SendMessageAction.java:119)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.dsl.actions.DelegatingTestAction.doExecute(DelegatingTestAction.java:54)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.TestCase.executeAction(TestCase.java:230)
+	... 32 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.consol.citrus.exceptions.TestCaseFailedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPostOnline -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.banistmo.notifybam.NotifyTest@31206beb]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-01-29T12:04:28Z" finished-at="2018-01-29T12:04:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.banistmo.notifybam.NotifyTest@31206beb]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-01-29T12:04:28Z" finished-at="2018-01-29T12:04:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.banistmo.notifybam.NotifyTest.testPostOnline()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="afterSuite(org.testng.ITestContext)[pri:0, instance:com.banistmo.notifybam.NotifyTest@31206beb]" name="afterSuite" is-config="true" duration-ms="16" started-at="2018-01-29T12:04:28Z" finished-at="2018-01-29T12:04:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3f28bd56]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.banistmo.notifybam.NotifyTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

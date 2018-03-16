@@ -1,0 +1,216 @@
+{
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "definitions": {},
+    "properties": {
+        "rqUID": {
+            "$id": "/properties/rqUID",
+            "type": "string",
+            "title": "Request Identifier"
+        },
+        "msgRqHdr": {
+            "$id": "/properties/msgRqHdr",
+            "type": "object",
+            "properties": {
+                "credentialsRsHdr": {
+                    "$id": "/properties/msgRqHdr/properties/credentialsRsHdr",
+                    "type": "object",
+                    "properties": {
+                        "seqNum": {
+                            "$id": "/properties/msgRqHdr/properties/credentialsRsHdr/properties/seqNum",
+                            "type": "string",
+                            "title": "Transaction code",
+                            "maxLength": 5,
+                            "examples": ["1003"]
+                        }
+                    },
+                    "required": ["seqNum"]
+                },
+                "contextRqHdr": {
+                    "$id": "/properties/msgRqHdr/properties/contextRqHdr",
+                    "type": "object",
+                    "properties": {
+                        "pointOfServiceData": {
+                            "$id": "/properties/msgRqHdr/properties/contextRqHdr/properties/pointOfServiceData",
+                            "type": "object",
+                            "properties": {
+                                "posAgent": {
+                                    "$id": "/properties/msgRqHdr/properties/contextRqHdr/properties/pointOfServiceData/properties/posAgent",
+                                    "type": "object",
+                                    "properties": {
+                                        "agentIdent": {
+                                            "$id": "/properties/msgRqHdr/properties/contextRqHdr/properties/pointOfServiceData/properties/posAgent/properties/agentIdent",
+                                            "type": "string",
+                                            "title": "Cashier identifier",
+                                            "default": "",
+                                            "maxLength": 8
+                                        }
+                                    }
+                                },
+                                "posLocation": {
+                                    "$id": "/properties/msgRqHdr/properties/contextRqHdr/properties/pointOfServiceData/properties/posLocation",
+                                    "type": "string",
+                                    "title": "Branch office or channel identifier",
+                                    "maxLength": 5
+                                }
+                            },
+                            "required": ["posLocation"]
+                        }
+                    },
+                    "required": ["pointOfServiceData"]
+                }
+            },
+            "required": ["credentialsRsHdr","contextRqHdr"]
+        },
+        "alertInfo": {
+            "$id": "/properties/alertInfo",
+            "type": "object",
+            "properties": {
+                "fromAcctRef": {
+                    "$id": "/properties/alertInfo/properties/fromAcctRef",
+                    "type": "object",
+                    "properties": {
+                        "acctRec": {
+                            "$id": "/properties/alertInfo/properties/fromAcctRef/properties/acctRec",
+                            "type": "object",
+                            "properties": {
+                                "acctId": {
+                                    "$id": "/properties/alertInfo/properties/fromAcctRef/properties/acctRec/properties/acctId",
+                                    "type": "string",
+                                    "title": "Account number",
+                                    "maxLength": 23
+                                },
+                                "acctInfo": {
+                                    "$id": "/properties/alertInfo/properties/fromAcctRef/properties/acctRec/properties/acctInfo",
+                                    "type": "object",
+                                    "properties": {
+                                        "acctTitle": {
+                                            "$id": "/properties/alertInfo/properties/fromAcctRef/properties/acctRec/properties/acctInfo/properties/acctTitle",
+                                            "type": "string",
+                                            "title": "Account title",
+                                            "default": ""
+                                        },
+                                        "acctBal": {
+                                            "$id": "/properties/alertInfo/properties/fromAcctRef/properties/acctRec/properties/acctInfo/properties/acctBal",
+                                            "title": "Account balance",
+                                            "type": "integer",
+                                            "maximum": 9999999999999,
+                                            "default": 0
+                                        }
+                                    },
+                                    "required": ["acctBal"]
+                                }
+                            },
+                            "required": ["acctId"]
+                        }
+                    }
+                },
+                "toAcctRef": {
+                    "$id": "/properties/alertInfo/properties/toAcctRef",
+                    "type": "object",
+                    "properties": {
+                        "acctRec": {
+                            "$id": "/properties/alertInfo/properties/toAcctRef/properties/acctRec",
+                            "type": "object",
+                            "properties": {
+                                "acctId": {
+                                    "$id": "/properties/alertInfo/properties/toAcctRef/properties/acctRec/properties/acctId",
+                                    "type": "string",
+                                    "title": "Account number",
+                                    "default": "",
+                                    "maxLength": 23
+                                },
+                                "acctInfo": {
+                                    "$id": "/properties/alertInfo/properties/toAcctRef/properties/acctRec/properties/acctInfo",
+                                    "type": "object",
+                                    "properties": {
+                                        "acctTitle": {
+                                            "$id": "/properties/alertInfo/properties/toAcctRef/properties/acctRec/properties/acctInfo/properties/acctTitle",
+                                            "type": "string",
+                                            "title": "Account title",
+                                            "default": ""
+                                        },
+                                        "acctBal": {
+                                            "$id": "/properties/alertInfo/properties/toAcctRef/properties/acctRec/properties/acctInfo/properties/acctBal",
+                                            "type": "string",
+                                            "title": "Account Balance",
+                                            "default": ""
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "curAmt": {
+                    "$id": "/properties/alertInfo/properties/curAmt",
+                    "type": "object",
+                    "properties": {
+                        "amt": {
+                            "$id": "/properties/alertInfo/properties/curAmt/properties/amt",
+                            "title": "Currency amount",
+                            "type": "integer",
+                            "maximum": 9999999999999,
+                            "examples": [1000]
+                        },
+                        "curCode": {
+                            "$id": "/properties/alertInfo/properties/curAmt/properties/curCode",
+                            "type": "string",
+                            "title": "Currency code",
+                            "maxLength": 3,
+                            "default": "USD",
+                            "examples": ["USD","EUR","JPY","GBP"]
+                        }
+                    },
+                    "required": ["amt"]
+                },
+                "trnType": {
+                    "$id": "/properties/alertInfo/properties/trnType",
+                    "type": "object",
+                    "properties": {
+                        "trnTypeSource": {
+                            "$id": "/properties/alertInfo/properties/trnType/properties/trnTypeSource",
+                            "type": "string",
+                            "title": "The Trntypesource Schema",
+                            "default": "",
+                            "examples": ["CHECK"]
+                        },
+                        "trnTypeValue": {
+                            "$id": "/properties/alertInfo/properties/trnType/properties/trnTypeValue",
+                            "type": "integer",
+                            "title": "Check number",
+                            "maximum": 99999999999,
+                            "default": 0,
+                            "examples": ["989812"]
+                        }
+                    },
+                    "required": ["trnTypeValue"]
+                },
+                "memo": {
+                    "$id": "/properties/alertInfo/properties/memo",
+                    "type": "string",
+                    "title": "Detail transaction",
+                    "maxLength": 40,
+                    "default": ""
+                }
+            },
+            "required": [
+                "fromAcctRef",
+                "curAmt",
+                "memo"
+            ]
+        },
+        "dueDate": {
+            "$id": "/properties/dueDate",
+            "type": "string",
+            "format": "date-time",
+            "title": "Date of transaction"
+        }
+    },
+    "required": [
+        "rqUID",
+        "msgRqHdr",
+        "alertInfo",
+        "dueDate"
+    ]
+}

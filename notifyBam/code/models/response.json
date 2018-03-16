@@ -1,0 +1,55 @@
+{
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "properties": {
+        "rqUID": {
+            "$id": "/properties/rqUID",
+            "type": "string",
+            "title": "Request Identifier",
+            "description": "UUID transaction Identifier",
+            "default": "",
+            "examples": [
+                ""
+            ]
+        },
+        "status": {
+            "$id": "/properties/status",
+            "type": "object",
+            "properties": {
+                "statusCode": {
+                    "$id": "/properties/status/properties/statusCode",
+                    "type": "integer",
+                    "title": "Status Code",
+                    "description": "HTTP status code response of request.",
+                    "default": 0,
+                    "examples": [
+                        500
+                    ]
+                },
+                "statusDesc": {
+                    "$id": "/properties/status/properties/statusDesc",
+                    "type": "string",
+                    "title": "Status Description",
+                    "description": "Short description of status code",
+                    "default": "",
+                    "examples": [
+                        "Internal server error"
+                    ]
+                }
+            }
+        },
+        "message": {
+            "$id": "/properties/message",
+            "type": "string",
+            "title": "Message",
+            "description": "Business error message",
+            "default": "",
+            "examples": [
+                "Error de negocio"
+            ]
+        }
+    },
+    "required": ["rqUID", "status", "message"]
+}

@@ -1,0 +1,289 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "2",
+    "title": "Notify BAM",
+    "description": "Service to send notify to sentinel",
+    "termsOfService": "http://www.example.com/terms-of-service",
+    "contact": {
+      "name": "Ariel Rodriguez",
+      "email": "arrodriguez@personalsoft.com.co"
+    },
+    "license": {
+      "name": "private"
+    }
+  },
+  "tags": [
+    {
+      "name": "Notification",
+      "description": "Service to notify BAM"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/notifyBam": {
+      "post": {
+        "tags": [
+          "Notification"
+        ],
+        "summary": "Create a notify BAM",
+        "description": "Send a alert to Sentinel SNS topic",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/NotifyRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/definitions/NotifyResponse"
+          },
+          "400": {
+            "$ref": "#/definitions/NotifyResponse"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "credentialsRsHdr": {
+      "type": "object",
+      "properties": {
+        "seqNum": {
+          "type": "string",
+          "title": "Transaction code",
+          "maxLength": 5
+        }
+      },
+      "required": [
+        "seqNum"
+      ]
+    },
+    "pointOfServiceData": {
+      "type": "object",
+      "properties": {
+        "posAgent": {
+          "type": "object",
+          "properties": {
+            "agentIdent": {
+              "type": "string",
+              "title": "Cashier identifier",
+              "default": "",
+              "maxLength": 8
+            }
+          }
+        },
+        "posLocation": {
+          "type": "string",
+          "title": "Branch office or channel identifier",
+          "maxLength": 5
+        }
+      },
+      "required": [
+        "posLocation"
+      ]
+    },
+    "msgRqHdr": {
+      "type": "object",
+      "properties": {
+        "credentialsRsHdr": {
+          "$ref": "#/definitions/credentialsRsHdr"
+        },
+        "contextRqHdr": {
+          "type": "object",
+          "properties": {
+            "pointOfServiceData": {
+              "$ref": "#/definitions/pointOfServiceData"
+            }
+          },
+          "required": [
+            "pointOfServiceData"
+          ]
+        }
+      },
+      "required": [
+        "credentialsRsHdr",
+        "contextRqHdr"
+      ]
+    },
+    "acctInfo": {
+      "type": "object",
+      "properties": {
+        "acctTitle": {
+          "type": "string",
+          "title": "Account title",
+          "default": ""
+        },
+        "acctBal": {
+          "title": "Account balance",
+          "type": "integer",
+          "maximum": 9999999999999,
+          "default": 0
+        }
+      },
+      "required": [
+        "acctBal"
+      ]
+    },
+    "acctRec": {
+      "type": "object",
+      "properties": {
+        "acctId": {
+          "type": "string",
+          "title": "Account number",
+          "maxLength": 23
+        },
+        "acctInfo": {
+          "$ref": "#/definitions/acctInfo"
+        }
+      },
+      "required": [
+        "acctId"
+      ]
+    },
+    "NotifyRequest": {
+      "type": "object",
+      "properties": {
+        "rqUID": {
+          "type": "string",
+          "title": "Request Identifier"
+        },
+        "msgRqHdr": {
+          "$ref": "#/definitions/msgRqHdr"
+        },
+        "alertInfo": {
+          "type": "object",
+          "properties": {
+            "fromAcctRef": {
+              "type": "object",
+              "properties": {
+                "acctRec": {
+                  "$ref": "#/definitions/acctRec"
+                }
+              }
+            },
+            "toAcctRef": {
+              "type": "object",
+              "properties": {
+                "acctRec": {
+                  "$ref": "#/definitions/acctRec"
+                }
+              }
+            },
+            "curAmt": {
+              "type": "object",
+              "properties": {
+                "amt": {
+                  "title": "Currency amount",
+                  "type": "integer",
+                  "maximum": 9999999999999,
+                  "example": 1000
+                },
+                "curCode": {
+                  "type": "string",
+                  "title": "Currency code",
+                  "maxLength": 3,
+                  "default": "USD"
+                }
+              },
+              "required": [
+                "amt"
+              ]
+            },
+            "trnType": {
+              "type": "object",
+              "properties": {
+                "trnTypeSource": {
+                  "type": "string",
+                  "title": "The Trntypesource Schema",
+                  "default": "",
+                  "example": "CHECK"
+                },
+                "trnTypeValue": {
+                  "type": "integer",
+                  "title": "Check number",
+                  "maximum": 99999999999,
+                  "default": 0,
+                  "example": 989812
+                }
+              },
+              "required": [
+                "trnTypeValue"
+              ]
+            },
+            "memo": {
+              "type": "string",
+              "title": "Detail transaction",
+              "maxLength": 40,
+              "default": ""
+            }
+          },
+          "required": [
+            "fromAcctRef",
+            "curAmt",
+            "memo"
+          ]
+        },
+        "dueDate": {
+          "type": "string",
+          "format": "date-time",
+          "title": "Date of transaction"
+        }
+      },
+      "required": [
+        "rqUID",
+        "msgRqHdr",
+        "alertInfo",
+        "dueDate"
+      ]
+    },
+    "NotifyResponse": {
+      "type": "object",
+      "properties": {
+        "rqUID": {
+          "type": "string",
+          "title": "Request Identifier",
+          "description": "UUID transaction Identifier",
+          "default": ""
+        },
+        "status": {
+          "type": "object",
+          "properties": {
+            "statusCode": {
+              "type": "integer",
+              "title": "Status Code",
+              "description": "HTTP status code response of request.",
+              "default": 0,
+              "example": 500
+            },
+            "statusDesc": {
+              "type": "string",
+              "title": "Status Description",
+              "description": "Short description of status code",
+              "default": "",
+              "example": "Internal server error"
+            }
+          }
+        },
+        "message": {
+          "type": "string",
+          "title": "Message",
+          "description": "Business error message",
+          "default": "",
+          "example": "Error de negocio"
+        }
+      },
+      "required": [
+        "rqUID",
+        "status",
+        "message"
+      ]
+    }
+  }
+}

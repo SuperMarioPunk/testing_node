@@ -1,0 +1,30 @@
+{
+	"rqUID": "1234455",
+	"dueDate": "2018-01-19T20:02:50+00:00",
+	"msgRqHdr": {
+		"credentialsRsHdr": {
+			"seqNum": "1003"
+		},
+		"contextRqHdr": {
+			"pointOfServiceData": {
+				"posAgent": {
+					"agentIdent": "1"
+				},
+				"posLocation": "08"
+			}
+		}
+	},
+	"alertInfo": {
+		"fromAcctRef": {
+			"acctRec": {
+				"acctInfo": {
+					"acctBal": 12389
+				}
+			}
+		},
+		"curAmt": {
+			"amt": 12344
+		},
+		"memo": "Deposito de cuenta"
+	}
+}

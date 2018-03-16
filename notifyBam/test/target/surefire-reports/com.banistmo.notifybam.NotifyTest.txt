@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.banistmo.notifybam.NotifyTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.63 s <<< FAILURE! - in com.banistmo.notifybam.NotifyTest
+testPost(com.banistmo.notifybam.NotifyTest)  Time elapsed: 0.49 s  <<< FAILURE!
+com.consol.citrus.exceptions.TestCaseFailedException: Unable to resolve dynamic endpoint uri! Neither header entry 'citrus_endpoint_uri' nor default endpoint uri is set
+Caused by: com.consol.citrus.exceptions.CitrusRuntimeException: Unable to resolve dynamic endpoint uri! Neither header entry 'citrus_endpoint_uri' nor default endpoint uri is set
+
+testPostOnline(com.banistmo.notifybam.NotifyTest)  Time elapsed: 0 s  <<< FAILURE!
+com.consol.citrus.exceptions.TestCaseFailedException: Unable to resolve dynamic endpoint uri! Neither header entry 'citrus_endpoint_uri' nor default endpoint uri is set
+Caused by: com.consol.citrus.exceptions.CitrusRuntimeException: Unable to resolve dynamic endpoint uri! Neither header entry 'citrus_endpoint_uri' nor default endpoint uri is set
+

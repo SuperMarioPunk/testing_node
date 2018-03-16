@@ -1,0 +1,37 @@
+service: mqcon
+
+frameworkVersion: ">=1.2.0 <2.0.0"
+
+provider:
+  name: aws
+  runtime: java8
+  timeout: 130
+  stage: ${opt:stage}
+  deploymentBucket:
+    name: serverless-deployment-${opt:stage}
+  environment:
+    MQM_QCHANNEL: ${file(./serverless.env.yml):${opt:stage, 'dev'}.QCHANNEL}
+    MQM_QM: ${file(./serverless.env.yml):${opt:stage, 'dev'}.QM}
+    MQM_TTL: ${file(./serverless.env.yml):${opt:stage, 'dev'}.TTL}
+    MQM_QHOST: ${file(./serverless.env.yml):${opt:stage, 'dev'}.QHOST}
+    MQM_QP: ${file(./serverless.env.yml):${opt:stage, 'dev'}.QP}
+    MQM_USERID: ${file(./serverless.env.yml):${opt:stage, 'dev'}.USERID}
+
+package:
+  artifact: mqcon.jar
+
+functions:
+  mqcon:
+    handler: com.banistmo.mqcon.MQConHandler
+    events:
+      - schedule:
+          rate: cron(0/5 8-17 ? * MON-FRI *)
+          enabled: true
+    role: arn:aws:iam::766904567340:role/lambda_basic_execution
+    vpc:
+      id: ${opt:vpc}
+      securityGroupIds:
+        - ${opt:sg}
+      subnetIds:
+        - ${opt:subnet1}
+        - ${opt:subnet2}

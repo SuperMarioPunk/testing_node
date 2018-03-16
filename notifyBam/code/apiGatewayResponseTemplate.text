@@ -1,0 +1,9 @@
+#set ($errorMessageObj = $util.parseJson($input.path('$.errorMessage')))
+{
+  "rqUID" : "$errorMessageObj.rqUID",
+  "status": {
+     "statusCode": "$errorMessageObj.status.statusCode",
+     "statusDesc": "$errorMessageObj.status.statusDesc",
+     "serverStatusDesc": "$errorMessageObj.message"
+  }
+}

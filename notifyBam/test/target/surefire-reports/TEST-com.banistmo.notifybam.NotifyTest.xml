@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.banistmo.notifybam.NotifyTest" time="2.63" tests="2" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_152\jre\bin"/>
+    <property name="java.vm.version" value="25.152-b16"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\arrodriguez\eclipse-workspace\notify-bam-test"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="PA"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\arrodriguez\eclipse-workspace\notify-bam-test"/>
+    <property name="java.runtime.version" value="1.8.0_152-b16"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_152\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\ARRODR~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Users\arrodriguez\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf7768976907722676802.tmp"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_152\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk1.8.0_152//bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_152//bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_152//bin/../jre/lib/amd64;C:\Users\arrodriguez\.windows-build-tools\python27\;C:\Users\arrodriguez\.windows-build-tools\python27\Scripts;C:\Users\arrodriguez\AppData\Roaming\Python\Python36\Scripts;C:\Program Files\nodejs;C:\Program Files\Java\jdk1.8.0_152\\bin;C:\gradle-4.4.1\bin;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64;C:\Users\arrodriguez\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\CVSNT\;C:\Users\arrodriguez\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\proyectos\Git\cmd;C:\Program Files\dotnet\;C:\Program Files (x86)\MSBuild\14.0\Bin;C:\WINDOWS\system32\WindowsPowerShell\v1.0;C:\Program Files\nodejs;C:\Program Files\Java\jdk1.8.0_152\\bin;C:\gradle-4.4.1\bin;%PYTHONPATH%;C:\Users\arrodriguez\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\CVSNT\;C:\Users\arrodriguez\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\arrodriguez\AppData\Roaming\Python\Python36\Scripts;;C:\eclipse;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\arrodriguez"/>
+    <property name="user.timezone" value="America/Bogota"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="arrodriguez"/>
+    <property name="java.class.path" value="C:\eclipse\plugins\org.eclipse.m2e.maven.runtime_1.8.2.20171007-0216\jars\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_152\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -s C:\Users\arrodriguez\.m2\settings.xml install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="es"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_152"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_152\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_152\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_152\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Users\arrodriguez\eclipse-workspace\notify-bam-test\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="testPost" classname="com.banistmo.notifybam.NotifyTest" time="0.49">
+    <failure message="Unable to resolve dynamic endpoint uri! Neither header entry &apos;citrus_endpoint_uri&apos; nor default endpoint uri is set" type="com.consol.citrus.exceptions.TestCaseFailedException">com.consol.citrus.exceptions.TestCaseFailedException: Unable to resolve dynamic endpoint uri! Neither header entry 'citrus_endpoint_uri' nor default endpoint uri is set
+Caused by: com.consol.citrus.exceptions.CitrusRuntimeException: Unable to resolve dynamic endpoint uri! Neither header entry 'citrus_endpoint_uri' nor default endpoint uri is set
+</failure>
+    <system-out><![CDATA[12:04:27,389 INFO  tContextBootstrapper| Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7181ae3f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@46238e3f, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@6e2c9341, org.springframework.test.context.support.DirtiesContextTestExecutionListener@32464a14]
+12:04:27,535 INFO  icApplicationContext| Refreshing org.springframework.context.support.GenericApplicationContext@35083305: startup date [Mon Jan 29 12:04:27 COT 2018]; root of context hierarchy
+12:04:27,629 DEBUG        citrus.Citrus| Loading Citrus application properties
+12:04:27,629 DEBUG        citrus.Citrus| Setting application property citrus.spring.java.config=com.banistmo.notifybam.EndpointConfig
+12:04:27,660 DEBUG BeanDefinitionReader| Loaded 0 bean definitions from location pattern [classpath*:citrus-context.xml]
+12:04:28,410 INFO  port.LoggingReporter| 
+12:04:28,410 INFO  port.LoggingReporter| ------------------------------------------------------------------------
+12:04:28,410 INFO  port.LoggingReporter|        .__  __                       
+12:04:28,410 INFO  port.LoggingReporter|   ____ |__|/  |________ __ __  ______
+12:04:28,410 INFO  port.LoggingReporter| _/ ___\|  \   __\_  __ \  |  \/  ___/
+12:04:28,410 INFO  port.LoggingReporter| \  \___|  ||  |  |  | \/  |  /\___ \ 
+12:04:28,420 INFO  port.LoggingReporter|  \___  >__||__|  |__|  |____//____  >
+12:04:28,420 INFO  port.LoggingReporter|      \/                           \/
+12:04:28,420 INFO  port.LoggingReporter| 
+12:04:28,420 INFO  port.LoggingReporter| C I T R U S  T E S T S  2.7.3
+12:04:28,420 INFO  port.LoggingReporter| 
+12:04:28,420 INFO  port.LoggingReporter| ------------------------------------------------------------------------
+12:04:28,420 DEBUG port.LoggingReporter| BEFORE TEST SUITE
+12:04:28,421 INFO  port.LoggingReporter| 
+12:04:28,421 INFO  port.LoggingReporter| 
+12:04:28,421 INFO  port.LoggingReporter| BEFORE TEST SUITE: SUCCESS
+12:04:28,421 INFO  port.LoggingReporter| ------------------------------------------------------------------------
+12:04:28,421 INFO  port.LoggingReporter| 
+12:04:28,437 DEBUG t.TestContextFactory| Created new test context - using global variables: '{}'
+12:04:28,452 DEBUG       util.FileUtils| Reading file resource: 'request.json' (encoding is 'windows-1252')
+12:04:28,452 INFO  port.LoggingReporter| 
+12:04:28,452 INFO  port.LoggingReporter| ------------------------------------------------------------------------
+12:04:28,452 DEBUG port.LoggingReporter| STARTING TEST NotifyTest.testPost <com.banistmo.notifybam>
+12:04:28,452 INFO  port.LoggingReporter| 
+12:04:28,452 DEBUG      citrus.TestCase| Initializing test case
+12:04:28,452 DEBUG  context.TestContext| Setting variable: citrus.test.name with value: 'NotifyTest.testPost'
+12:04:28,452 DEBUG  context.TestContext| Setting variable: citrus.test.package with value: 'com.banistmo.notifybam'
+12:04:28,452 DEBUG      citrus.TestCase| Test variables:
+12:04:28,452 DEBUG      citrus.TestCase| citrus.test.name = NotifyTest.testPost
+12:04:28,452 DEBUG      citrus.TestCase| citrus.test.package = com.banistmo.notifybam
+12:04:28,452 INFO  port.LoggingReporter| 
+12:04:28,452 DEBUG port.LoggingReporter| TEST STEP 1/2: send
+12:04:28,912 DEBUG ltCorrelationManager| Saving correlation key for 'citrus_message_correlator_client'
+12:04:28,912 DEBUG  context.TestContext| Setting variable: citrus_message_correlator_client with value: 'citrus_message_id = 'b97178dc-328c-435d-a6dd-608eb363e278''
+12:04:28,912 INFO  port.LoggingReporter| 
+12:04:28,912 ERROR port.LoggingReporter| TEST FAILED NotifyTest.testPost <com.banistmo.notifybam> Nested exception is: 
+com.consol.citrus.exceptions.CitrusRuntimeException: Unable to resolve dynamic endpoint uri! Neither header entry 'citrus_endpoint_uri' nor default endpoint uri is set
+	at com.consol.citrus.endpoint.resolver.DynamicEndpointUriResolver.resolveEndpointUri(DynamicEndpointUriResolver.java:60)
+	at com.consol.citrus.http.client.HttpClient.send(HttpClient.java:94)
+	at com.consol.citrus.actions.SendMessageAction.doExecute(SendMessageAction.java:119)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.dsl.actions.DelegatingTestAction.doExecute(DelegatingTestAction.java:54)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.TestCase.executeAction(TestCase.java:230)
+	at com.consol.citrus.TestCase.doExecute(TestCase.java:149)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.Citrus.run(Citrus.java:290)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.invokeTestMethod(TestNGCitrusTest.java:132)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTestDesigner.invokeTestMethod(TestNGCitrusTestDesigner.java:73)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.run(TestNGCitrusTest.java:110)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.run(TestNGCitrusTest.java:56)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:221)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:657)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+12:04:28,912 INFO  port.LoggingReporter| ------------------------------------------------------------------------
+12:04:28,912 INFO  port.LoggingReporter| 
+]]></system-out>
+  </testcase>
+  <testcase name="testPostOnline" classname="com.banistmo.notifybam.NotifyTest" time="0">
+    <failure message="Unable to resolve dynamic endpoint uri! Neither header entry &apos;citrus_endpoint_uri&apos; nor default endpoint uri is set" type="com.consol.citrus.exceptions.TestCaseFailedException">com.consol.citrus.exceptions.TestCaseFailedException: Unable to resolve dynamic endpoint uri! Neither header entry 'citrus_endpoint_uri' nor default endpoint uri is set
+Caused by: com.consol.citrus.exceptions.CitrusRuntimeException: Unable to resolve dynamic endpoint uri! Neither header entry 'citrus_endpoint_uri' nor default endpoint uri is set
+</failure>
+    <system-out><![CDATA[12:04:28,927 DEBUG t.TestContextFactory| Created new test context - using global variables: '{}'
+12:04:28,927 DEBUG       util.FileUtils| Reading file resource: 'request.json' (encoding is 'windows-1252')
+12:04:28,927 INFO  port.LoggingReporter| 
+12:04:28,927 INFO  port.LoggingReporter| ------------------------------------------------------------------------
+12:04:28,927 DEBUG port.LoggingReporter| STARTING TEST NotifyTest.testPostOnline <com.banistmo.notifybam>
+12:04:28,927 INFO  port.LoggingReporter| 
+12:04:28,927 DEBUG      citrus.TestCase| Initializing test case
+12:04:28,927 DEBUG  context.TestContext| Setting variable: citrus.test.name with value: 'NotifyTest.testPostOnline'
+12:04:28,927 DEBUG  context.TestContext| Setting variable: citrus.test.package with value: 'com.banistmo.notifybam'
+12:04:28,927 DEBUG      citrus.TestCase| Test variables:
+12:04:28,927 DEBUG      citrus.TestCase| citrus.test.name = NotifyTest.testPostOnline
+12:04:28,927 DEBUG      citrus.TestCase| citrus.test.package = com.banistmo.notifybam
+12:04:28,927 INFO  port.LoggingReporter| 
+12:04:28,927 DEBUG port.LoggingReporter| TEST STEP 1/2: send
+12:04:28,927 DEBUG ltCorrelationManager| Saving correlation key for 'citrus_message_correlator_client'
+12:04:28,927 DEBUG  context.TestContext| Setting variable: citrus_message_correlator_client with value: 'citrus_message_id = 'de638ac6-2207-4bc7-8926-e269bff72142''
+12:04:28,927 INFO  port.LoggingReporter| 
+12:04:28,927 ERROR port.LoggingReporter| TEST FAILED NotifyTest.testPostOnline <com.banistmo.notifybam> Nested exception is: 
+com.consol.citrus.exceptions.CitrusRuntimeException: Unable to resolve dynamic endpoint uri! Neither header entry 'citrus_endpoint_uri' nor default endpoint uri is set
+	at com.consol.citrus.endpoint.resolver.DynamicEndpointUriResolver.resolveEndpointUri(DynamicEndpointUriResolver.java:60)
+	at com.consol.citrus.http.client.HttpClient.send(HttpClient.java:94)
+	at com.consol.citrus.actions.SendMessageAction.doExecute(SendMessageAction.java:119)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.dsl.actions.DelegatingTestAction.doExecute(DelegatingTestAction.java:54)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.TestCase.executeAction(TestCase.java:230)
+	at com.consol.citrus.TestCase.doExecute(TestCase.java:149)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.Citrus.run(Citrus.java:290)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.invokeTestMethod(TestNGCitrusTest.java:132)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTestDesigner.invokeTestMethod(TestNGCitrusTestDesigner.java:73)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.run(TestNGCitrusTest.java:110)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.run(TestNGCitrusTest.java:56)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:221)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:657)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+12:04:28,927 INFO  port.LoggingReporter| ------------------------------------------------------------------------
+12:04:28,927 INFO  port.LoggingReporter| 
+]]></system-out>
+  </testcase>
+</testsuite>
